@@ -3,65 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
 
-<h1>todos</h1>
+<div class="main-layout">
 
-<div class="todo-board">
+    <h1 class="todo-title">todos</h1>
 
-    <form class="todo-creator">
-        <button class="todo-check-all" aria-label="Check all items as done"></button>
-        <input type="text" class="todo-text-input" placeholder="new asd" aria-label="New todo name"/>
-    </form>
+    <div class="todo-board __has_content">
 
-    <div class="todos-list">
-        <div class="todo-item">
-            <input type="checkbox" class="todo-item-ready-marker" aria-label="Mark todo as not ready"/>
-            <div class="todo-item-text">HTML</div>
-            <button class="todo-item-remove" aria-label="Delete todo"></button>
+        <form class="todo-creator">
+            <button class="todo-creator_check-all" aria-label="Check all items as done"></button>
+            <div class="todo-creator_text-input-w">
+                <input class="todo-creator_text-input" type="text" placeholder="New todo name"
+                       aria-label="Input new todo text"/>
+            </div>
+        </form>
+
+        <div class="todos-list">
+
+            <div class="todos-list_item">
+                <div class="custom-checkbox todos-list_item_ready-marker">
+                    <input type="checkbox" class="custom-checkbox_target" aria-label="Mark todo as ready" />
+                    <div class="custom-checkbox_visual">
+                        <div class="custom-checkbox_visual_icon"></div>
+                    </div>
+                </div>
+                <button class="todos-list_item_remove" aria-label="Delete todo"></button>
+                <div class="todos-list_item_text-w">
+                    <textarea readonly class="todos-list_item_text">HTML</textarea>
+                </div>
+            </div>
+
+            <div class="todos-list_item">
+                <div class="custom-checkbox todos-list_item_ready-marker">
+                    <input type="checkbox" class="custom-checkbox_target" aria-label="Mark todo as ready">
+                    <div class="custom-checkbox_visual">
+                        <div class="custom-checkbox_visual_icon"></div>
+                    </div>
+                </div>
+                <button class="todos-list_item_remove" aria-label="Delete todo"></button>
+                <div class="todos-list_item_text-w">
+                    <textarea readonly class="todos-list_item_text">CSS</textarea>
+                </div>
+            </div>
+
+            <div class="todos-list_item">
+                <div class="custom-checkbox todos-list_item_ready-marker">
+                    <input type="checkbox" class="custom-checkbox_target" aria-label="Mark todo as ready">
+                    <div class="custom-checkbox_visual">
+                        <div class="custom-checkbox_visual_icon"></div>
+                    </div>
+                </div>
+                <button class="todos-list_item_remove" aria-label="Delete todo"></button>
+                <div class="todos-list_item_text-w">
+                    <textarea readonly class="todos-list_item_text">JS</textarea>
+                </div>
+            </div>
+
+            <div class="todos-list_item">
+                <div class="custom-checkbox todos-list_item_ready-marker">
+                    <input type="checkbox" class="custom-checkbox_target" aria-label="Mark todo as ready">
+                    <div class="custom-checkbox_visual">
+                        <div class="custom-checkbox_visual_icon"></div>
+                    </div>
+                </div>
+                <button class="todos-list_item_remove" aria-label="Delete todo"></button>
+                <div class="todos-list_item_text-w">
+                    <textarea readonly class="todos-list_item_text">JS tools</textarea>
+                </div>
+            </div>
+
         </div>
-    </div>
 
-    <div class="todos-list">
-        <div class="todo-item">
-            <input type="checkbox" checked class="todo-item-ready-marker" aria-label="Mark todo as ready"/>
-            <div class="todo-item-text">CSS</div>
-            <button class="todo-item-remove" aria-label="Delete todo"></button>
-        </div>
-    </div>
+        <div class="todos-toolbar">
+            <div class="todos-toolbar_unready-counter">3 items left</div>
 
-    <div class="todos-list">
-        <div class="todo-item">
-            <input type="checkbox" class="todo-item-ready-marker" aria-label="Mark todo as ready"/>
-            <div class="todo-item-text">JS</div>
-            <button class="todo-item-remove" aria-label="Delete todo"></button>
-        </div>
-    </div>
+            <div class="filters todos-toolbar_filters">
+                <button class="filter-item __selected" aria-label="Filter: All, is selected">All</button>
+                <button class="filter-item" aria-label="Filter: Active">Active</button>
+                <button class="filter-item" aria-label="Filter: Completed">Completed</button>
+            </div>
 
-    <div class="todos-list">
-        <div class="todo-item">
-            <input type="checkbox" class="todo-item-ready-marker" aria-label="Mark todo as ready"/>
-            <div class="todo-item-text">JS Tools</div>
-            <button class="todo-item-remove" aria-label="Delete todo"></button>
-        </div>
-    </div>
+            <button class="todos-toolbar_clear-completed">Clear completed</button>
 
-    <div class="todos-toolbar">
-        <div class="toos-toolbar_unready-counter">3 items left</div>
-
-        <div class="filters todos-toolbar_filters">
-            <button class="todos-toolbar_filter __selected" aria-label="Filter: All, is selected">All</button>
-            <button class="todos-toolbar_filter" aria-label="Filter: Active">Active</button>
-            <button class="todos-toolbar_filter" aria-label="Filter: Completed">Completed</button>
         </div>
 
-        <button class="todos-toolbar_clear-completed">Clear completed</button>
 
     </div>
-
 
 </div>
 
 </body>
-</html>
