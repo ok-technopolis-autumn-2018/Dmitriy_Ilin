@@ -32,11 +32,11 @@
             }
 
 
-    .todo-board .todos-list,
-    .todo-board .todos-toolbar {
+    .todo-board .todos-list/*,
+    .todo-board .todos-toolbar*/ {
         display: none;
         }
-    .todo-board.__has_content .todos-list,
-    .todo-board.__has_content .todos-toolbar {
+    .todo-board.__has_content .todos-list/*,
+    .todo-board.__has_content .todos-toolbar*/ {
         display: block;
         }
