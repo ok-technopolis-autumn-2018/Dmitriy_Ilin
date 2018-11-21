@@ -1,21 +1,23 @@
 
+
 .todo-board {
     background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
 
     position: relative;
-}
+    }
 
     .todo-board:before,
     .todo-board:after {
         /*content: '';*/
         position: absolute;
         top: 100%;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,.2);
         z-index: -1;
         }
-        .todo-board.__has_content:before,
-        .todo-board.__has_content:after {
+        .todo-board.__has-content:before,
+        .todo-board.__has-content:after {
             content: '';
             }
 
@@ -25,18 +27,21 @@
             height: 8px;
             }
 
-        .todo-board:after{
+        .todo-board:after {
             left: 4px;
             right: 4px;
             height: 4px;
             }
 
 
-    .todo-board .todos-list/*,
-    .todo-board .todos-toolbar*/ {
+    .todo-board .todos-list,
+    .todo-board .todos-toolbar {
         display: none;
         }
-    .todo-board.__has_content .todos-list/*,
-    .todo-board.__has_content .todos-toolbar*/ {
+    .todo-board.__has-content .todos-list,
+    .todo-board.__has-content .todos-toolbar {
         display: block;
         }
+
+
+
