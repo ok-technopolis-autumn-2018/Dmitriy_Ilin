@@ -1,0 +1,53 @@
+
+.todos-toolbar {
+    margin-top: 60px;
+    border-top: 1px solid #ccc;
+    padding-left: 10px;
+    padding-right: 7px;
+    display: flex;
+
+    height: 30px;
+
+    justify-content: space-between;
+    align-items: center;
+    }
+
+.todos-toolbar:after {
+    position: absolute;
+    content: '';
+    }
+
+    .todos-toolbar_unready-counter {
+        color: #ccc;
+        }
+
+    .todos-toolbar_filters {
+
+        }
+            .filter-item,
+            .todos-toolbar_clear-completed {
+                color: #ccc;
+                background: 0;
+                border: 1px solid #fff;
+                border-radius: 10%;
+                outline: none;
+                }
+            .filter-item:hover {
+                border-color: #ccc;
+                }
+            .filter-item:active {
+                background: #f5f5f5;
+                }
+
+
+        .todos-toolbar_clear-completed {
+            color: #ccc;
+            }
+
+        .todos-toolbar_clear-completed:active {
+            background: #f5f5f5;
+            }
+        .todos-toolbar_clear-completed:hover {
+            border: 1px solid #ccc;
+            border-radius: 10%;
+            }
