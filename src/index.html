@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Todo MVC</title>
-    <link rel="stylesheet" href="src/styles/default.css" />
+    <link rel="stylesheet" href="src/styles/default.scss" />
 </head>
 <body>
 
@@ -43,7 +43,7 @@
                 </div>
                 <button class="todos-list_item_remove" aria-label="Delete todo"></button>
                 <div class="todos-list_item_text-w">
-                    <textarea readonly class="todos-list_item_text">CSS</textarea>
+                    <textarea class="todos-list_item_text">CSS</textarea>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@
                 </div>
                 <button class="todos-list_item_remove" aria-label="Delete todo"></button>
                 <div class="todos-list_item_text-w">
-                    <textarea readonly class="todos-list_item_text">JS</textarea>
+                    <textarea class="todos-list_item_text">JS</textarea>
                 </div>
             </div>
 
@@ -69,19 +69,19 @@
                 </div>
                 <button class="todos-list_item_remove" aria-label="Delete todo"></button>
                 <div class="todos-list_item_text-w">
-                    <textarea readonly class="todos-list_item_text">JS tools</textarea>
+                    <textarea class="todos-list_item_text">JS tools</textarea>
                 </div>
             </div>
 
         </div>
 
         <div class="todos-toolbar">
-            <div class="todos-toolbar_unready-counter">3 items left</div>
+            <div class="todos-toolbar_unready-counter"><span>4</span> items left</div>
 
             <div class="filters todos-toolbar_filters">
-                <button class="filter-item __selected" aria-label="Filter: All, is selected">All</button>
-                <button class="filter-item" aria-label="Filter: Active">Active</button>
-                <button class="filter-item" aria-label="Filter: Completed">Completed</button>
+                <button class="filter-item __selected" aria-label="Filter: All, is selected" data-action="all">All</button>
+                <button class="filter-item" aria-label="Filter: Active" data-action="active">Active</button>
+                <button class="filter-item" aria-label="Filter: Completed" data-action="completed">Completed</button>
             </div>
 
             <button class="todos-toolbar_clear-completed">Clear completed</button>
