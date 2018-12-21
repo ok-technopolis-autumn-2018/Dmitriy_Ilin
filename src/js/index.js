@@ -145,8 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
         );
         console.log(templateResult);
         list.appendChild(templateResult.root);
-        listItems.push(templateResult.root);
-        showFilterItems(filteWrapper.querySelector('.filter-item.__selected').dataset.action);
     }
 
 
