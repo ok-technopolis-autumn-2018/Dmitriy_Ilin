@@ -34,13 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (!this.classList.contains('__selected')) {
                         filterLastSelected.classList.remove('__selected');
                         this.classList.add('__selected');
-                        if (this.dataset.action === 'active') {
-                            showFilterItems('active');
-                        } else if (this.dataset.action === 'completed') {
-                            showFilterItems('completed');
-                        } else {
-                            showFilterItems('all');
-                        }
+                        showFilterItems(this.dataset.action);
                     }
                 }
         );
@@ -62,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'completed':
                 if (input.checked === false && !listItems[k].classList.contains('hidden')){
                     listItems[k].classList.add('hidden');
-                } else {
+                } else if (input.checked === true && listItems[k].classList.contains('hidden')) {
                     listItems[k].classList.remove('hidden');
                 }
                 break;
@@ -72,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 break;
             }
-
         }
     }
 
@@ -145,6 +138,9 @@ document.addEventListener('DOMContentLoaded', function () {
         );
         console.log(templateResult);
         list.appendChild(templateResult.root);
+        var filterSelected = filteWrapper.querySelector('.filter-item.__selected');
+        console.log(filterSelected.dataset.action);
+        showFilterItems(filterSelected.dataset.action);
     }
 
 
