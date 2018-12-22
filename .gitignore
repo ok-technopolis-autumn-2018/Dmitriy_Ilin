@@ -1,15 +1,6 @@
-# Log file
-*.log
+# Created by .ignore support plugin (hsz.mobi)
 
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
+/node_modules
+/build
 
 
-*.xml
-*.iml
-.idea/*
